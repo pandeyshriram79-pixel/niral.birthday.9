@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Happy Birthday Niral!</title>
+  <style>
+    body {
+      text-align: center;
+      background: linear-gradient(to right, #ff9a9e, #fad0c4);
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
+    }
+    h1 {
+      font-size: 3em;
+      color: #fff;
+      margin-top: 50px;
+      text-shadow: 2px 2px 4px #000;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 30px;
+    }
+    .gallery img, .gallery video {
+      width: 250px;
+      margin: 10px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+    .gallery img:hover, .gallery video:hover {
+      transform: scale(1.1);
+    }
+    .message {
+      margin-top: 40px;
+      font-size: 1.5em;
+      color: #fff;
+      text-shadow: 1px 1px 3px #000;
+    }
+    @keyframes fall {
+      to { transform: translateY(100vh); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <h1>🎉 Happy Birthday Niral 🎉</h1>
+
+  <!-- Birthday Song -->
+  <audio autoplay>
+    <source src="birthday.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Photo & Video Gallery -->
+  <div class="gallery">
+    <img src="Snapchat-30284178.jpg" alt="Birthday Photo">
+    <video controls>
+      <source src="Snapchat-92624872.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!-- Personal Message -->
+  <div class="message">
+    Wishing you lots of joy, laughter, and success ahead. Have an amazing year, Niral!
+  </div>
+
+  <!-- Confetti Animation -->
+  <script>
+    function createConfetti() {
+      const confetti = document.createElement("div");
+      confetti.innerText = "🎉";
+      confetti.style.position = "fixed";
+      confetti.style.left = Math.random() * window.innerWidth + "px";
+      confetti.style.top = "-20px";
+      confetti.style.fontSize = "24px";
+      confetti.style.animation = "fall 3s linear forwards";
+      document.body.appendChild(confetti);
+      setTimeout(() => confetti.remove(), 3000);
+    }
+    setInterval(createConfetti, 300);
+  </script>
+</body>
+</html>
